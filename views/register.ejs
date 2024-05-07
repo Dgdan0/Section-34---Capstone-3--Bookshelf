@@ -1,0 +1,51 @@
+<body>
+    <%- include('partials/sidebar.ejs')%>
+    <div id="center-container">
+        <div id="main-title">
+            <h1> Register </h1>
+        </div>
+        <form id="Login-container" action="/register" method="POST" novalidate>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required minlength="6" maxlength="15">
+                <div class="tooltip user-tooltip">
+                    <p class="title-tooltip">Username requirements:</p>
+                    <ul>
+                        <li>6-15 Characters</li>
+                    </ul>
+                </div>                <span class="material-symbols-outlined">person</span>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}" maxlength="15">
+                <div class="tooltip pass-tooltip">
+                    <p class="title-tooltip">Password requirements:</p>
+                    <ul>
+                        <li>6-15 Characters</li>
+                        <li>One Lowercase</li>
+                        <li>One Uppercase</li>
+                        <li>One Number</li>
+                    </ul>
+                </div>
+                <span class="material-symbols-outlined">key</span>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" placeholder="angela@email.com" required>
+                <div class="tooltip email-tooltip">
+                    <p class="title-tooltip">Email requirements:</p>
+                    <ul>
+                        <li>Valid email address</li>
+                    </ul>
+                </div>
+                <span class="material-symbols-outlined">mail</span>
+            </div>
+            <div class="register-other">
+                <p>Have an account? <a href="/login">Login</a></p>
+            </div>
+            <button type="submit" class="btn">Register</button>             
+        </form>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/scripts.js"></script>
+</body>
+</html>

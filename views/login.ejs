@@ -1,0 +1,32 @@
+<body>
+    <%- include('partials/sidebar.ejs')%>
+
+    <div id="center-container">
+        <div id="main-title">
+            <h1> Login </h1>
+        </div>
+        <form id="login-container" action="/login" method="POST" novalidate>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username">            
+                <span class="material-symbols-outlined">person</span>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password">
+                <span class="material-symbols-outlined">key</span>
+            </div>
+            <div class="login-other">
+                <a href="/password-reset">Forgot Password?</a>
+                <a class ="reg-btn" href="/register">Register</a>
+            </div>
+            <button type="submit" class="btn">Login</button>             
+        </form>
+
+
+    </div>
+    <% if(locals.success){ %>
+        <script>alert('Registration successful! Please log in.');</script>
+    <% } %>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/scripts.js"></script>
+</body>
+</html>

@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Bookshelf</title>
 </head>
 <body>
     <div id="sidebar-container">
         <ul id="side-main-container">
-            <li class="<%= locals.activePage === 'home' ? 'sidebar-clicked' : ''%>"><a href="/">Home</a></li>
-            <li class="<%= locals.activePage === 'bookshelf' ? 'sidebar-clicked' : ''%>"><a href="/bookshelf">Bookshelf</a></li>
-            <li class="<%= locals.activePage === 'add' ? 'sidebar-clicked' : ''%>"><a href="/add">Add Book</a></li>
+            <a href="/"><li class="<%= locals.activePage === 'home' ? 'sidebar-clicked' : ''%>">Home</li></a>
+            <a href="/login"><li class="<%= locals.activePage === 'login' ? 'sidebar-clicked' : ''%>">login</li></a>
+            <a href="/bookshelf"><li class="<%= locals.activePage === 'bookshelf' ? 'sidebar-clicked' : ''%>">Bookshelf</li></a>
+            <a href="/add"><li class="<%= locals.activePage === 'add' ? 'sidebar-clicked' : ''%>">Add Book</li></a>
         </ul>
         <ul id="side-aboutme-container">
             <li class="<%= locals.activePage === 'about' ? 'sidebar-clicked' : ''%>"><a href="/about">about</a></li>
